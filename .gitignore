@@ -36,6 +36,7 @@
 *.vsidx
 *.opendb
 *.db-wal
+*.exp
 *.tlog
 *.idb
 *.pdb
