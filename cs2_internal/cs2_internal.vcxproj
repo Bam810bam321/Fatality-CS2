@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Prerelease|x64">
+      <Configuration>Prerelease</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\sdk\generated.h" />
+    <ClInclude Include="include\sdk\offsets.h" />
+    <ClInclude Include="include\sdk\offsets_schema.h" />
+    <ClInclude Include="include\sdk\proto.h" />
+    <ClInclude Include="include\sdk\schema\client.h" />
+    <ClInclude Include="include\sdk\schema\engine2.h" />
+    <ClInclude Include="include\sdk\schema\global_types.h" />
+    <ClInclude Include="include\sdk\schema\particles.h" />
+    <ClInclude Include="include\sdk\schema\server.h" />
+    <ClInclude Include="include\sdk\schema\worldrenderer.h" />
+    <ClInclude Include="src\framework.h" />
+    <ClInclude Include="src\game\cfg.h" />
+    <ClInclude Include="src\memory\common.h" />
+    <ClInclude Include="src\memory\crt.h" />
+    <ClInclude Include="src\memory\detour_hook.h" />
+    <ClInclude Include="src\game\draw_manager.h" />
+    <ClInclude Include="src\game\game.h" />
+    <ClInclude Include="src\game\hook_manager.h" />
+    <ClInclude Include="src\memory\interfaceless.h" />
+    <ClInclude Include="src\memory\keyvalue3.h" />
+    <ClInclude Include="src\memory\memory.h" />
+    <ClInclude Include="src\game\movement.h" />
+    <ClInclude Include="src\game\visuals.h" />
+    <ClInclude Include="src\gui\anim.h" />
+    <ClInclude Include="src\gui\container.h" />
+    <ClInclude Include="src\gui\control.h" />
+    <ClInclude Include="src\gui\controls.h" />
+    <ClInclude Include="src\gui\controls\action_item.h" />
+    <ClInclude Include="src\gui\controls\button.h" />
+    <ClInclude Include="src\gui\controls\checkbox.h" />
+    <ClInclude Include="src\gui\controls\child_tab.h" />
+    <ClInclude Include="src\gui\controls\color_picker.h" />
+    <ClInclude Include="src\gui\controls\combo_box.h" />
+    <ClInclude Include="src\gui\controls\combo_box_agent.h" />
+    <ClInclude Include="src\gui\controls\control_container.h" />
+    <ClInclude Include="src\gui\controls\group.h" />
+    <ClInclude Include="src\gui\controls\hotkey.h" />
+    <ClInclude Include="src\gui\controls\hotkey_view.h" />
+    <ClInclude Include="src\gui\controls\hsv_slider.h" />
+    <ClInclude Include="src\gui\controls\image.h" />
+    <ClInclude Include="src\gui\controls\label.h" />
+    <ClInclude Include="src\gui\controls\layout.h" />
+    <ClInclude Include="src\gui\controls\list.h" />
+    <ClInclude Include="src\gui\controls\loading.h" />
+    <ClInclude Include="src\gui\controls\notification_control.h" />
+    <ClInclude Include="src\gui\controls\popup.h" />
+    <ClInclude Include="src\gui\controls\public_software_item.h" />
+    <ClInclude Include="src\gui\controls\search_result.h" />
+    <ClInclude Include="src\gui\controls\selectable.h" />
+    <ClInclude Include="src\gui\controls\selectable_inv.h" />
+    <ClInclude Include="src\gui\controls\selectable_script.h" />
+    <ClInclude Include="src\gui\controls\settings.h" />
+    <ClInclude Include="src\gui\controls\slider.h" />
+    <ClInclude Include="src\gui\controls\spacer.h" />
+    <ClInclude Include="src\gui\controls\tab.h" />
+    <ClInclude Include="src\gui\controls\tabs_layout.h" />
+    <ClInclude Include="src\gui\controls\text_input.h" />
+    <ClInclude Include="src\gui\controls\toggle_button.h" />
+    <ClInclude Include="src\gui\controls\widget.h" />
+    <ClInclude Include="src\gui\controls\window.h" />
+    <ClInclude Include="src\gui\debug.h" />
+    <ClInclude Include="src\gui\gui.h" />
+    <ClInclude Include="src\gui\helpers.h" />
+    <ClInclude Include="src\gui\hotkeys.h" />
+    <ClInclude Include="src\gui\input.h" />
+    <ClInclude Include="src\gui\misc.h" />
+    <ClInclude Include="src\gui\notify_system.h" />
+    <ClInclude Include="src\gui\popups\about_popup.h" />
+    <ClInclude Include="src\gui\popups\action_list_popup.h" />
+    <ClInclude Include="src\gui\popups\color_picker_popup.h" />
+    <ClInclude Include="src\gui\popups\combo_box_popup.h" />
+    <ClInclude Include="src\gui\popups\configs_popup.h" />
+    <ClInclude Include="src\gui\popups\dialog_box.h" />
+    <ClInclude Include="src\gui\popups\hotkey_overview_popup.h" />
+    <ClInclude Include="src\gui\popups\hotkey_popup.h" />
+    <ClInclude Include="src\gui\popups\message_box.h" />
+    <ClInclude Include="src\gui\popups\notifications_popup.h" />
+    <ClInclude Include="src\gui\popups\public_software_popup.h" />
+    <ClInclude Include="src\gui\popups\search_popup.h" />
+    <ClInclude Include="src\gui\popups\settings_popup.h" />
+    <ClInclude Include="src\gui\traits.h" />
+    <ClInclude Include="src\gui\values.h" />
+    <ClInclude Include="src\hooks\hooks.h" />
+    <ClInclude Include="src\macros.h" />
+    <ClInclude Include="src\memory\pe64.h" />
+    <ClInclude Include="src\memory\stb_sprintf.h" />
+    <ClInclude Include="src\menu\init\init_anim.h" />
+    <ClInclude Include="src\menu\menu.h" />
+    <ClInclude Include="src\menu\macros.h" />
+    <ClInclude Include="src\minhook\buffer.h" />
+    <ClInclude Include="src\minhook\hde\hde32.h" />
+    <ClInclude Include="src\minhook\hde\hde64.h" />
+    <ClInclude Include="src\minhook\hde\pstdint.h" />
+    <ClInclude Include="src\minhook\hde\table32.h" />
+    <ClInclude Include="src\minhook\hde\table64.h" />
+    <ClInclude Include="src\minhook\minhook.h" />
+    <ClInclude Include="src\minhook\trampoline.h" />
+    <ClInclude Include="src\renderer\include\lib\image.h" />
+    <ClInclude Include="src\renderer\include\lib\rectpack.h" />
+    <ClInclude Include="src\renderer\include\lib\truetype.h" />
+    <ClInclude Include="src\renderer\include\ren\adapter.h" />
+    <ClInclude Include="src\renderer\include\ren\adapters\adapter_dx11.h" />
+    <ClInclude Include="src\renderer\include\ren\adapters\adapter_dx9.h" />
+    <ClInclude Include="src\renderer\include\ren\buffer.h" />
+    <ClInclude Include="src\renderer\include\ren\buffers\cmd_buffer.h" />
+    <ClInclude Include="src\renderer\include\ren\buffers\ib_dx11.h" />
+    <ClInclude Include="src\renderer\include\ren\buffers\ib_dx9.h" />
+    <ClInclude Include="src\renderer\include\ren\buffers\vb_dx11.h" />
+    <ClInclude Include="src\renderer\include\ren\buffers\vb_dx9.h" />
+    <ClInclude Include="src\renderer\include\ren\layer.h" />
+    <ClInclude Include="src\renderer\include\ren\macros.h" />
+    <ClInclude Include="src\renderer\include\ren\managed.h" />
+    <ClInclude Include="src\renderer\include\ren\misc.h" />
+    <ClInclude Include="src\renderer\include\ren\renderer.h" />
+    <ClInclude Include="src\renderer\include\ren\types\animated_texture.h" />
+    <ClInclude Include="src\renderer\include\ren\types\animator.h" />
+    <ClInclude Include="src\renderer\include\ren\types\color.h" />
+    <ClInclude Include="src\renderer\include\ren\types\command.h" />
+    <ClInclude Include="src\renderer\include\ren\types\font.h" />
+    <ClInclude Include="src\renderer\include\ren\types\pos.h" />
+    <ClInclude Include="src\renderer\include\ren\types\shader.h" />
+    <ClInclude Include="src\renderer\include\ren\types\texture.h" />
+    <ClInclude Include="src\renderer\include\ren\types\vertex.h" />
+    <ClInclude Include="src\sdk\client.h" />
+    <ClInclude Include="src\sdk\color.h" />
+    <ClInclude Include="src\sdk\cvar.h" />
+    <ClInclude Include="src\sdk\engine.h" />
+    <ClInclude Include="src\sdk\globalvars.h" />
+    <ClInclude Include="src\sdk\input.h" />
+    <ClInclude Include="src\sdk\inputsystem.h" />
+    <ClInclude Include="src\sdk\interface.h" />
+    <ClInclude Include="src\sdk\localize.h" />
+    <ClInclude Include="src\sdk\macros.h" />
+    <ClInclude Include="src\sdk\math\intrinsic.h" />
+    <ClInclude Include="src\sdk\math\mat.h" />
+    <ClInclude Include="src\sdk\math\vector.h" />
+    <ClInclude Include="src\sdk\mem_alloc.h" />
+    <ClInclude Include="src\sdk\panorama.h" />
+    <ClInclude Include="src\sdk\schema.h" />
+    <ClInclude Include="src\sdk\sdk.h" />
+    <ClInclude Include="src\sdk\utl.h" />
+    <ClInclude Include="src\sdk\utl\utl_linked_list.h" />
+    <ClInclude Include="src\sdk\utl\utl_memory.h" />
+    <ClInclude Include="src\sdk\utl\utl_string.h" />
+    <ClInclude Include="src\sdk\utl\utl_ts_hash.h" />
+    <ClInclude Include="src\sdk\utl\utl_vector.h" />
+    <ClInclude Include="src\sdk\vec.h" />
+    <ClInclude Include="src\tinyformat.h" />
+    <ClInclude Include="src\utils\defs.h" />
+    <ClInclude Include="src\utils\fnv1a.h" />
+    <ClInclude Include="src\utils\hook.h" />
+    <ClInclude Include="src\utils\json.hpp" />
+    <ClInclude Include="src\utils\math.h" />
+    <ClInclude Include="src\utils\mem.h" />
+    <ClInclude Include="src\utils\murmur2.h" />
+    <ClInclude Include="src\utils\profiler.h" />
+    <ClInclude Include="src\utils\random.h" />
+    <ClInclude Include="src\utils\util.h" />
+    <ClInclude Include="src\utils\value_obfuscation.h" />
+    <ClInclude Include="src\utils\zip_file.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\game\cfg.cpp" />
+    <ClCompile Include="src\game\draw_manager.cpp" />
+    <ClCompile Include="src\game\game.cpp" />
+    <ClCompile Include="src\game\hook_manager.cpp" />
+    <ClCompile Include="src\memory\memory.cpp" />
+    <ClCompile Include="src\game\movement.cpp" />
+    <ClCompile Include="src\game\visuals.cpp" />
+    <ClCompile Include="src\gui\anim.cpp" />
+    <ClCompile Include="src\gui\container.cpp" />
+    <ClCompile Include="src\gui\control.cpp" />
+    <ClCompile Include="src\gui\controls\action_item.cpp" />
+    <ClCompile Include="src\gui\controls\button.cpp" />
+    <ClCompile Include="src\gui\controls\checkbox.cpp" />
+    <ClCompile Include="src\gui\controls\child_tab.cpp" />
+    <ClCompile Include="src\gui\controls\color_picker.cpp" />
+    <ClCompile Include="src\gui\controls\combo_box.cpp" />
+    <ClCompile Include="src\gui\controls\combo_box_agent.cpp" />
+    <ClCompile Include="src\gui\controls\control_container.cpp" />
+    <ClCompile Include="src\gui\controls\group.cpp" />
+    <ClCompile Include="src\gui\controls\hotkey.cpp" />
+    <ClCompile Include="src\gui\controls\hotkey_view.cpp" />
+    <ClCompile Include="src\gui\controls\hsv_slider.cpp" />
+    <ClCompile Include="src\gui\controls\label.cpp" />
+    <ClCompile Include="src\gui\controls\layout.cpp" />
+    <ClCompile Include="src\gui\controls\list.cpp" />
+    <ClCompile Include="src\gui\controls\loading.cpp" />
+    <ClCompile Include="src\gui\controls\notification_control.cpp" />
+    <ClCompile Include="src\gui\controls\popup.cpp" />
+    <ClCompile Include="src\gui\controls\public_software_item.cpp" />
+    <ClCompile Include="src\gui\controls\search_result.cpp" />
+    <ClCompile Include="src\gui\controls\selectable.cpp" />
+    <ClCompile Include="src\gui\controls\selectable_game.cpp" />
+    <ClCompile Include="src\gui\controls\selectable_inv.cpp" />
+    <ClCompile Include="src\gui\controls\selectable_script.cpp" />
+    <ClCompile Include="src\gui\controls\settings.cpp" />
+    <ClCompile Include="src\gui\controls\slider.cpp" />
+    <ClCompile Include="src\gui\controls\spacer.cpp" />
+    <ClCompile Include="src\gui\controls\tab.cpp" />
+    <ClCompile Include="src\gui\controls\tabs_layout.cpp" />
+    <ClCompile Include="src\gui\controls\text_input.cpp" />
+    <ClCompile Include="src\gui\controls\toggle_button.cpp" />
+    <ClCompile Include="src\gui\controls\widget.cpp" />
+    <ClCompile Include="src\gui\controls\window.cpp" />
+    <ClCompile Include="src\gui\gui.cpp" />
+    <ClCompile Include="src\gui\helpers.cpp" />
+    <ClCompile Include="src\gui\input.cpp" />
+    <ClCompile Include="src\gui\notify_system.cpp" />
+    <ClCompile Include="src\gui\popups\about_popup.cpp" />
+    <ClCompile Include="src\gui\popups\action_list_popup.cpp" />
+    <ClCompile Include="src\gui\popups\color_picker_popup.cpp" />
+    <ClCompile Include="src\gui\popups\combo_box_popup.cpp" />
+    <ClCompile Include="src\gui\popups\configs_popup.cpp" />
+    <ClCompile Include="src\gui\popups\dialog_box.cpp" />
+    <ClCompile Include="src\gui\popups\hotkey_overview_popup.cpp" />
+    <ClCompile Include="src\gui\popups\hotkey_popup.cpp" />
+    <ClCompile Include="src\gui\popups\message_box.cpp" />
+    <ClCompile Include="src\gui\popups\notifications_popup.cpp" />
+    <ClCompile Include="src\gui\popups\public_software_popup.cpp" />
+    <ClCompile Include="src\gui\popups\search_popup.cpp" />
+    <ClCompile Include="src\gui\popups\settings_popup.cpp" />
+    <ClCompile Include="src\hooks\client.cpp" />
+    <ClCompile Include="src\hooks\input_system.cpp" />
+    <ClCompile Include="src\hooks\steam.cpp" />
+    <ClCompile Include="src\menu\init\init_anim.cpp" />
+    <ClCompile Include="src\menu\menu.cpp" />
+    <ClCompile Include="src\menu\tabs\tab_legit.cpp" />
+    <ClCompile Include="src\menu\tabs\tab_lua.cpp" />
+    <ClCompile Include="src\menu\tabs\tab_misc.cpp" />
+    <ClCompile Include="src\menu\tabs\tab_rage.cpp" />
+    <ClCompile Include="src\menu\tabs\tab_skins.cpp" />
+    <ClCompile Include="src\menu\tabs\tab_visuals.cpp" />
+    <ClCompile Include="src\minhook\buffer.c" />
+    <ClCompile Include="src\minhook\hde\hde32.c" />
+    <ClCompile Include="src\minhook\hde\hde64.c" />
+    <ClCompile Include="src\minhook\hook.c" />
+    <ClCompile Include="src\minhook\trampoline.c" />
+    <ClCompile Include="src\renderer\src\adapters\adapter_dx11.cpp" />
+    <ClCompile Include="src\renderer\src\adapters\adapter_dx9.cpp" />
+    <ClCompile Include="src\renderer\src\buffers\cmd_buffer.cpp" />
+    <ClCompile Include="src\renderer\src\buffers\ib_dx11.cpp" />
+    <ClCompile Include="src\renderer\src\buffers\ib_dx9.cpp" />
+    <ClCompile Include="src\renderer\src\buffers\vb_dx11.cpp" />
+    <ClCompile Include="src\renderer\src\buffers\vb_dx9.cpp" />
+    <ClCompile Include="src\renderer\src\layer.cpp" />
+    <ClCompile Include="src\renderer\src\renderer.cpp" />
+    <ClCompile Include="src\renderer\src\types\animated_texture.cpp" />
+    <ClCompile Include="src\renderer\src\types\font.cpp" />
+    <ClCompile Include="src\renderer\src\types\shader.cpp" />
+    <ClCompile Include="src\renderer\src\types\texture.cpp" />
+    <ClCompile Include="src\sdk\client.cpp" />
+    <ClCompile Include="src\utils\mem.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{3afea3a6-2325-4e24-b977-bc9e95875c0a}</ProjectGuid>
+    <RootNamespace>cs2internal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)contrib\minhook\include;$(SolutionDir)contrib\renderer\include;$(SolutionDir)contrib\tinyformat;$(SolutionDir)contrib\xorstr\include;$(SolutionDir)contrib\luajit\src;$(ProjectDir)pch;$(ProjectDir)include;$(ProjectDir)src;$(DXSDK_DIR)\Include;$(CV_DIR)\Include\C;$(LIBRESSL_DIR)\Include;$(ProjectDir)src\renderer\include;D:\June 2010 SDK\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\Debug;$(DXSDK_DIR)\Lib\x64;$(CV_DIR)\Lib\COFF;$(LIBRESSL_DIR)\Lib\Debug;D:\June 2010 SDK\Lib\x64;$(LibraryPath)</LibraryPath>
+    <GenerateManifest>false</GenerateManifest>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)contrib\minhook\include;$(SolutionDir)contrib\renderer;$(SolutionDir)contrib\tinyformat;$(SolutionDir)contrib\xorstr\include;$(SolutionDir)contrib\luajit\src;$(ProjectDir)pch;$(ProjectDir)include;$(ProjectDir)src;$(DXSDK_DIR)\Include;$(CV_DIR)\Include\C;$(LIBRESSL_DIR)\Include;C:\Users\ПК\Desktop\fatality.win cs2 framework\cs2_internal-master\cs2_internal\src\renderer\include;C:\Users\ПК\Desktop\minhook-master\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\Release;$(DXSDK_DIR)\Lib\x64;$(CV_DIR)\Lib\COFF;$(LIBRESSL_DIR)\Lib\Release;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>release</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|x64'">
+    <IncludePath>$(SolutionDir)contrib\minhook\include;$(SolutionDir)contrib\renderer\include;$(SolutionDir)contrib\tinyformat;$(SolutionDir)contrib\xorstr\include;$(SolutionDir)contrib\luajit\src;$(ProjectDir)pch;$(ProjectDir)include;$(ProjectDir)src;$(DXSDK_DIR)\Include;$(CV_DIR)\Include\C;$(LIBRESSL_DIR)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\Release;$(DXSDK_DIR)\Lib\x64;$(CV_DIR)\Lib\COFF;$(LIBRESSL_DIR)\Lib\Release;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>JM_XORSTR_DISABLE_AVX_INTRINSICS;_DEBUG;CS2INTERNAL_EXPORTS;_WINDOWS;_USRDLL;TINYFORMAT_USE_VARIADIC_TEMPLATES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch\$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)contrib\minhook;$(SolutionDir)contrib\minhook\include;$(SolutionDir)contrib\luajit;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libMinHook.x64.lib;d3d11.lib;d3dx11.lib;d3dcompiler.lib;minhook.lib;minhook_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)contrib\minhook;$(SolutionDir)contrib\luajit;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>JM_XORSTR_DISABLE_AVX_INTRINSICS;NDEBUG;CS2INTERNAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles>
+      </ForcedIncludeFiles>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+      <AdditionalIncludeDirectories>C:\Users\kraig\Downloads\Telegram Desktop\cs2_internal-master\cs2_internal-master\contrib\minhook;C:\Users\kraig\Downloads\Telegram Desktop\cs2_internal-master\cs2_internal-master\contrib\xorstr;C:\Users\kraig\Downloads\Telegram Desktop\cs2_internal-master\cs2_internal-master\contrib\tinyformat;C:\Users\kraig\Downloads\Telegram Desktop\cs2_internal-master\cs2_internal-master\contrib\minhook\include;C:\Users\kraig\Downloads\Telegram Desktop\cs2_internal-master\cs2_internal-master\cs2_internal\src\renderer\include;C:\Users\kraig\Downloads\Telegram Desktop\cs2_internal-master\cs2_internal-master\contrib\luajit;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalOptions>/wd5999 /Zc:threadSafeInit- %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalOptions>/MAP %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>libMinHook.x64.lib;d3d11.lib;d3dx11.lib;d3dcompiler.lib;minhook.lib;minhook_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\kraig\Downloads\Telegram Desktop\cs2_internal-master\cs2_internal-master\contrib\minhook;C:\Users\kraig\Downloads\Telegram Desktop\cs2_internal-master\cs2_internal-master\contrib\luajit;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Prerelease|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>JM_XORSTR_DISABLE_AVX_INTRINSICS;NDEBUG;CS2INTERNAL_EXPORTS;_WINDOWS;_USRDLL;_HAS_STATIC_RTTI=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>$(ProjectDir)pch\pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <AdditionalOptions>-Wno-logical-op-parentheses -Wno-unused-command-line-argument /Zc:threadSafeInit /Oy- -Xclang -fno-rtti -Xclang -fno-rtti-data -flto -Xclang -ffast-math %(AdditionalOptions)</AdditionalOptions>
+      <PrecompiledHeaderOutputFile>$(IntDir)pch\$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles>$(ProjectDir)pch\pch.h</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalOptions>/MAP %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>luajit.lib;lua51.lib;Wininet.lib;renderer.lib;libMinHook.x64.lib;d3d11.lib;d3dx11.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

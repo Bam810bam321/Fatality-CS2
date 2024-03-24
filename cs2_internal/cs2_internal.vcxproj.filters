@@ -1,0 +1,857 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="pch">
+      <UniqueIdentifier>{3c87bb9f-661c-4704-9e38-2d41ac432537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="includes\utils">
+      <UniqueIdentifier>{1e189fe2-ceb1-4e06-8962-3a4f89c8009b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{21b01f91-7166-4b41-b941-1b39f23d9513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\sdk">
+      <UniqueIdentifier>{bf0a3f0a-f22f-48d4-92b9-219ce04122d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\game">
+      <UniqueIdentifier>{56af8a15-fb06-4755-b0a1-57019683385d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\game">
+      <UniqueIdentifier>{62e81ec0-e299-4bf3-83e7-c6d4ed920e21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\hooks">
+      <UniqueIdentifier>{934e04d7-fced-4f58-aa14-6351c6625dad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\hooks">
+      <UniqueIdentifier>{55d6910c-2653-4712-b2bf-2aa12b06f944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\gui">
+      <UniqueIdentifier>{5aa78460-a2f1-4fc0-bbf0-e7b3963e778f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\menu">
+      <UniqueIdentifier>{401b3943-7265-4702-a102-652c698685c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gui">
+      <UniqueIdentifier>{3f73cf90-7f24-49d5-9cd3-277d5b68a98f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\menu">
+      <UniqueIdentifier>{9a2cb90a-d991-4d04-a0c8-38434f52fd46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\gui\controls">
+      <UniqueIdentifier>{1c0f456e-4a9e-4d4b-90f8-205dca37d5ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\gui\popups">
+      <UniqueIdentifier>{445bb356-616c-4f0c-a3d7-02cd8366ecaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\menu\init">
+      <UniqueIdentifier>{7b09aa00-f559-4342-93aa-f4d8bd90d084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gui\controls">
+      <UniqueIdentifier>{37fae4bf-c1f6-4a90-a76f-44e11f3aa054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\gui\popups">
+      <UniqueIdentifier>{36ee93b2-58c0-466a-b332-50a4561c75bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\lua">
+      <UniqueIdentifier>{5d9f1c21-38f9-4edc-9731-f33e5b994dc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\menu\init">
+      <UniqueIdentifier>{05df2621-cfcc-4384-bdc5-bb4a50648f1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\menu\tabs">
+      <UniqueIdentifier>{93c6cdf3-aa70-4270-bdce-0bd7a31d0c6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lua">
+      <UniqueIdentifier>{1da1b724-a565-4171-8a49-9c0f17b6c6af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lua\api">
+      <UniqueIdentifier>{d51f99bf-e8f1-4567-b8e8-499ef235ad3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\include">
+      <UniqueIdentifier>{360a8f8a-9783-4152-8789-fec70cbc98d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\include\sdk">
+      <UniqueIdentifier>{af37eef5-3694-4da5-ae02-a7f62fbae3f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\include\sdk\schema">
+      <UniqueIdentifier>{82fea6ec-53ea-423a-ba92-e55dca3f91b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\sdk\math">
+      <UniqueIdentifier>{12def43b-a990-4355-a740-9ed5b23087e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\sdk\utl">
+      <UniqueIdentifier>{6a4a75b6-3362-414a-863e-5f2b1e18f994}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\sdk">
+      <UniqueIdentifier>{bee1007b-1ac1-4845-8cf7-27d8ee048fa0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\framework.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\macros.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\fnv1a.h">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\mem.h">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\color.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\globalvars.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\interface.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\macros.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\schema.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\utl.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\vec.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\game.h">
+      <Filter>includes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\hook_manager.h">
+      <Filter>includes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\hooks\hooks.h">
+      <Filter>includes\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\random.h">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\value_obfuscation.h">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\profiler.h">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\anim.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\container.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\control.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\debug.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\gui.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\helpers.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\hotkeys.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\input.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\misc.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\traits.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\values.h">
+      <Filter>includes\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\action_item.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\button.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\checkbox.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\child_tab.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\color_picker.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\combo_box.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\combo_box_agent.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\control_container.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\group.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\hotkey.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\hotkey_view.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\hsv_slider.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\image.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\label.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\layout.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\list.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\loading.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\notification_control.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\popup.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\public_software_item.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\search_result.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\selectable.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\selectable_inv.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\selectable_script.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\settings.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\slider.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\spacer.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\tab.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\tabs_layout.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\text_input.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\toggle_button.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\widget.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\controls\window.h">
+      <Filter>includes\gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\about_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\action_list_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\color_picker_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\combo_box_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\configs_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\dialog_box.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\hotkey_overview_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\hotkey_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\message_box.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\notifications_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\public_software_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\search_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\popups\settings_popup.h">
+      <Filter>includes\gui\popups</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\menu.h">
+      <Filter>includes\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\macros.h">
+      <Filter>includes\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\menu\init\init_anim.h">
+      <Filter>includes\menu\init</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\cfg.h">
+      <Filter>includes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\util.h">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\zip_file.hpp">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\json.hpp">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\client.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sdk\generated.h">
+      <Filter>includes\include\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sdk\offsets.h">
+      <Filter>includes\include\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sdk\offsets_schema.h">
+      <Filter>includes\include\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sdk\schema\client.h">
+      <Filter>includes\include\sdk\schema</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sdk\schema\engine2.h">
+      <Filter>includes\include\sdk\schema</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sdk\schema\global_types.h">
+      <Filter>includes\include\sdk\schema</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sdk\schema\particles.h">
+      <Filter>includes\include\sdk\schema</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sdk\schema\worldrenderer.h">
+      <Filter>includes\include\sdk\schema</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\visuals.h">
+      <Filter>includes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\math\mat.h">
+      <Filter>includes\sdk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\math\vector.h">
+      <Filter>includes\sdk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\utl\utl_memory.h">
+      <Filter>includes\sdk\utl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\utl\utl_string.h">
+      <Filter>includes\sdk\utl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\utl\utl_ts_hash.h">
+      <Filter>includes\sdk\utl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\utl\utl_vector.h">
+      <Filter>includes\sdk\utl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\sdk.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sdk\schema\server.h">
+      <Filter>includes\include\sdk\schema</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\engine.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\defs.h">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\math.h">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\inputsystem.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\draw_manager.h">
+      <Filter>includes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\math\intrinsic.h">
+      <Filter>includes\sdk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\cvar.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\utl\utl_linked_list.h">
+      <Filter>includes\sdk\utl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\input.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\localize.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\mem_alloc.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\panorama.h">
+      <Filter>includes\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\movement.h">
+      <Filter>includes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sdk\proto.h">
+      <Filter>includes\include\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\murmur2.h">
+      <Filter>includes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\lib\image.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\lib\rectpack.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\lib\truetype.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\adapters\adapter_dx9.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\adapters\adapter_dx11.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\buffers\cmd_buffer.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\buffers\ib_dx9.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\buffers\ib_dx11.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\buffers\vb_dx9.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\buffers\vb_dx11.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\types\animated_texture.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\types\animator.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\types\color.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\types\command.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\types\font.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\types\pos.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\types\shader.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\types\texture.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\types\vertex.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\adapter.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\buffer.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\layer.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\macros.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\managed.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\misc.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer\include\ren\renderer.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\minhook\buffer.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\minhook\minhook.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\minhook\trampoline.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\minhook\hde\hde32.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\minhook\hde\pstdint.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\minhook\hde\table32.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tinyformat.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\notify_system.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\minhook\hde\hde64.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\minhook\hde\table64.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\hook.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\detour_hook.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\memory.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\crt.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\pe64.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\stb_sprintf.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\keyvalue3.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\common.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+    <ClInclude Include="src\memory\interfaceless.h">
+      <Filter>includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\dllmain.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\mem.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\game.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\hook_manager.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\input_system.cpp">
+      <Filter>src\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\steam.cpp">
+      <Filter>src\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\anim.cpp">
+      <Filter>src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\container.cpp">
+      <Filter>src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\control.cpp">
+      <Filter>src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\gui.cpp">
+      <Filter>src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\helpers.cpp">
+      <Filter>src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\input.cpp">
+      <Filter>src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\notify_system.cpp">
+      <Filter>src\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\action_item.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\button.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\checkbox.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\child_tab.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\color_picker.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\combo_box.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\combo_box_agent.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\control_container.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\group.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\hotkey.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\hotkey_view.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\hsv_slider.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\label.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\layout.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\list.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\loading.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\notification_control.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\popup.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\public_software_item.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\search_result.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\selectable.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\selectable_game.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\selectable_inv.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\selectable_script.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\settings.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\slider.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\spacer.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\tab.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\tabs_layout.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\text_input.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\toggle_button.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\widget.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\controls\window.cpp">
+      <Filter>src\gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\about_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\action_list_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\color_picker_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\combo_box_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\configs_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\dialog_box.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\hotkey_overview_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\hotkey_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\message_box.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\notifications_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\public_software_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\search_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\popups\settings_popup.cpp">
+      <Filter>src\gui\popups</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\cfg.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\menu.cpp">
+      <Filter>src\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\init\init_anim.cpp">
+      <Filter>src\menu\init</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\tabs\tab_legit.cpp">
+      <Filter>src\menu\tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\tabs\tab_lua.cpp">
+      <Filter>src\menu\tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\tabs\tab_misc.cpp">
+      <Filter>src\menu\tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\tabs\tab_rage.cpp">
+      <Filter>src\menu\tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\tabs\tab_skins.cpp">
+      <Filter>src\menu\tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\menu\tabs\tab_visuals.cpp">
+      <Filter>src\menu\tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hooks\client.cpp">
+      <Filter>src\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\visuals.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sdk\client.cpp">
+      <Filter>src\sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\draw_manager.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\movement.cpp">
+      <Filter>src\game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\adapters\adapter_dx9.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\adapters\adapter_dx11.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\buffers\cmd_buffer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\buffers\ib_dx9.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\buffers\ib_dx11.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\buffers\vb_dx9.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\buffers\vb_dx11.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\types\animated_texture.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\types\font.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\types\shader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\types\texture.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\layer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\renderer\src\renderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\minhook\buffer.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\minhook\hook.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\minhook\trampoline.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\minhook\hde\hde32.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\minhook\hde\hde64.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\memory\memory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

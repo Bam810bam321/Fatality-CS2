@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+.vs/cs2_internal/v17/.suo
+*.db-shm
+*.db
+*.vsidx
+*.opendb
+*.db-wal
+*.tlog
+*.idb
+*.pdb
+*.recipe
+*.log
+*.json
