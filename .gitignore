@@ -42,3 +42,4 @@
 *.recipe
 *.log
 *.json
+x64/Debug/cs2_internal.lib
