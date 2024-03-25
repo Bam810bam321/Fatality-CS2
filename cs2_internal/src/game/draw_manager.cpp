@@ -20,11 +20,11 @@ void draw_manager_t::create_objects()
 	const auto buf_copy = textures;
 	textures.clear();
 
-	for (const auto &tex : buf_copy | std::views::values)
-		if (tex.name != invalid_name)
-			get_svg_texture(tex.name, tex.height);
-		else
-			get_panorama_texture(tex.path, tex.height);
+	//for (const auto &tex : buf_copy | std::views::values)
+		//if (tex.name != invalid_name)
+			//get_svg_texture(tex.name, tex.height);
+		//else
+			//get_panorama_texture(tex.path, tex.height);
 
 }
 
@@ -76,7 +76,7 @@ std::shared_ptr<texture> draw_manager_t::get_panorama_texture(const std::string 
 {
 	const auto hash = utils::fnv1a(path.c_str()) + target_height;
 	auto ico = textures.find(hash);
-	if (ico == textures.end())
+	/*if (ico == textures.end())
 	{
 		const auto svg = sdk::load_svg_compiled_file(tfm::format(XOR("panorama/images/%s.vsvg_c"), path).c_str());
 		if (svg.empty())
@@ -95,8 +95,7 @@ std::shared_ptr<texture> draw_manager_t::get_panorama_texture(const std::string 
 			return nullptr;
 
 		ico = textures.insert_or_assign(hash, icon_info_t{invalid_name, path, target_height, tex}).first;
-	}
-
+	}*/
 	return ico->second.tex;
 }
 

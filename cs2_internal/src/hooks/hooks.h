@@ -28,7 +28,10 @@ namespace hooks
 		void override_view(void *rcx, sdk::cview_setup *view_setup);
 		void on_render_start(sdk::cview_render *view_render);
 		float get_fov(void *rcx);
+		inline CBaseHookObject<decltype(&frame_stage_notify)> hkFrameStageNotify = {};
+		inline CBaseHookObject<decltype(&override_view)> hkOverrideView = {};
 		inline CBaseHookObject<decltype(&get_fov)> hkGetFov = {};
 		inline CBaseHookObject<decltype(&on_render_start)> hkOnRenderStart = {};
+		inline CBaseHookObject<decltype(&create_move)> hkCreateMove = {};
 	}
 } // namespace hooks

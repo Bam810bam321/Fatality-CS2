@@ -83,9 +83,6 @@ namespace hooks::steam
 
 		static_cast<ID3D11DeviceContext *>(draw.adapter->get_context())->OMSetRenderTargets(1, &view, nullptr);
 
-		draw.time = sdk::GlobalVars->real_time;
-		draw.frame_time = sdk::GlobalVars->frame_time;
-
 		draw.refresh();
 
 		if (menu::init_anim.init_done)

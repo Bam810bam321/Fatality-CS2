@@ -1,27 +1,14 @@
 #include "game/game.h"
 
-//BOOL APIENTRY DllMain(uintptr_t inst, uint32_t reason, uint32_t reserved)
-//{
-//	if (reason == DLL_PROCESS_ATTACH)
-//	{
-//		std::thread(
-//			[inst, reserved]
-//			{
-//				game = std::make_unique<game_t>(inst, reserved);
-//				game->init();
-//			}).detach();
-//	}
-//
-//	return TRUE;
-//}
-
 uintptr_t __stdcall init_main(const HMODULE h_module) {
 	game->init();
 	return 0;
 }
 
-BOOL APIENTRY DllMain(uintptr_t inst, uint32_t  dw_reason_for_call, uint32_t lp_reserved) {
-	switch (dw_reason_for_call) {
+BOOL APIENTRY DllMain(uintptr_t inst, uint32_t  dw_reason_for_call, uint32_t lp_reserved) 
+{
+	switch (dw_reason_for_call) 
+	{
 	case DLL_PROCESS_ATTACH:
 	{
 		DisableThreadLibraryCalls((HMODULE)inst);
@@ -29,8 +16,7 @@ BOOL APIENTRY DllMain(uintptr_t inst, uint32_t  dw_reason_for_call, uint32_t lp_
 		auto current_process = GetCurrentProcess();
 		auto priority_class = GetPriorityClass(current_process);
 
-		if (priority_class != HIGH_PRIORITY_CLASS
-			&& priority_class != REALTIME_PRIORITY_CLASS)
+		if (priority_class != HIGH_PRIORITY_CLASS && priority_class != REALTIME_PRIORITY_CLASS)
 			SetPriorityClass(current_process, HIGH_PRIORITY_CLASS);
 
 		game = std::make_unique<game_t>(inst, lp_reserved);

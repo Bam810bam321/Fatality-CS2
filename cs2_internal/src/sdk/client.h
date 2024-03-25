@@ -333,29 +333,29 @@ namespace sdk
 		VIRTUAL(11, update(int a2, int a3), void(*)(void*, int, int))(a2, a3)
 	};
 
-	inline uint8_t *load_text_file(const char *name)
+	/*inline uint8_t *load_text_file(const char *name)
 	{
 		return reinterpret_cast<uint8_t*(__fastcall *)(const char *, void *)>(game->client.at(sdk::offsets::functions::load_text_file))(name, nullptr);
-	}
+	}*/
 
-	inline std::string load_svg_compiled_file(const char *name)
-	{
-		std::string out{};
+	//inline std::string load_svg_compiled_file(const char *name)
+	//{
+	//	std::string out{};
 
-		const auto file = load_text_file(name);
-		if (!file)
-			return out;
+	//	const auto file = load_text_file(name);
+	//	if (!file)
+	//		return out;
 
-		uint8_t *i{file};
+	//	uint8_t *i{file};
 
-		// locate start
-		while (!std::string(reinterpret_cast<const char *>(i)).starts_with(XOR("<svg ")))
-			++i;
+	//	// locate start
+	//	while (!std::string(reinterpret_cast<const char *>(i)).starts_with(XOR("<svg ")))
+	//		++i;
 
-		// read shit
-		out = reinterpret_cast<const char *>(i);
+	//	// read shit
+	//	out = reinterpret_cast<const char *>(i);
 
-		sdk::MemAlloc->free(file);
-		return out;
-	}
+	//	sdk::MemAlloc->free(file);
+	//	return out;
+	//}
 } // namespace sdk

@@ -447,8 +447,8 @@ namespace menu
 		}).detach();*/
 
 #ifndef CS2_CLOUD
-		ctx->user.username = XOR("Cracked");
-		ctx->user.active_until = XOR("never");
+		ctx->user.username = XOR("DaddyKermit");
+		ctx->user.active_until = XOR("Lifetime");
 		ctx->user.is_alpha = true;
 #else
 		ctx->user.username = globals::user_info.name;

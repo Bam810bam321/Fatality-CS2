@@ -13,15 +13,12 @@
 #include "memory/interfaceless.h"
 
 uint32_t utils::runtime_basis = 2166136261u;
-
 std::unique_ptr<game_t> game;
-
 namespace fs = std::filesystem;
+using namespace utils;
 
-game_t::game_t(uintptr_t _base, uint32_t tok) :
-	base(_base)
+game_t::game_t(uintptr_t _base, uint32_t tok) : base(_base)
 {
-	using namespace utils;
 
 	game_dir = ENC2(util::get_game_dir());
 
@@ -53,8 +50,6 @@ void game_t::remove_fonts() const
 
 void game_t::init()
 {
-	using namespace utils;
-
 	MEM::Setup();
 
 	auto solve_adress = [](std::uint8_t* nAddressBytes, std::uint32_t nRVAOffset, std::uint32_t nRIPOffset) -> std::uint8_t*
@@ -109,28 +104,13 @@ void game_t::init()
 	sdk::GameResourceService = iless::Capture<sdk::cgame_resource_service>(pEngineRegisterList, GAME_RESOURCE_SERVICE_CLIENT);
 	sdk::Engine = iless::Capture<sdk::cengine_client>(pEngineRegisterList, SOURCE2_ENGINE_TO_CLIENT);
 	sdk::Cvar = iless::Capture<sdk::ccvar>(pTier0RegisterList, ENGINE_CVAR);
-	sdk::GlobalVars = *reinterpret_cast<sdk::global_vars_t**>(solve_adress(MEM::FindPattern(CLIENT_DLL, CS_XOR("48 89 15 ? ? ? ? 48 8D 05 ? ? ? ? 48 85 D2")), 0x3, 0x7));
+	sdk::GlobalVars = *reinterpret_cast<sdk::global_vars_t**>(solve_adress(MEM::FindPattern(CLIENT_DLL, CS_XOR("48 89 0D ? ? ? ? 48 89 41")), 0x3, 0x7));
 	sdk::LocalPlayerController = *reinterpret_cast<sdk::cs2_player_controller**>(solve_adress(MEM::FindPattern(CLIENT_DLL, CS_XOR("48 8B 05 ? ? ? ? 48 85 C0 74 4F")), 0x3, 0x7));
 	sdk::GameEntitySystem = *reinterpret_cast<sdk::cgame_entity_system**>(solve_adress(MEM::FindPattern(CLIENT_DLL, CS_XOR("48 8B 0D ? ? ? ? 48 89 7C 24 ? 8B FA C1 EB")), 0x3, 0x7));
-	sdk::Input = *reinterpret_cast<sdk::ccsgo_input**>(solve_adress(MEM::FindPattern(CLIENT_DLL, CS_XOR("48 8B 0D ? ? ? ? 48 8B 01 FF 50 ? 8B DF")), 0x3, 0x7));
+	sdk::Input = *reinterpret_cast<sdk::ccsgo_input**>(solve_adress(MEM::FindPattern(CLIENT_DLL, CS_XOR("48 8B 0D ? ? ? ? E8 ? ? ? ? 8B BE ? ? ? ? 44 8B F0 85 FF 78 04 FF C7 EB 03")), 0x3, 0x7));
 	sdk::SwapChain = **reinterpret_cast<ISwapChainDx11***>(solve_adress(MEM::FindPattern(RENDERSYSTEM_DLL, CS_XOR("66 0F 7F 05 ? ? ? ? 66 0F 7F 0D ? ? ? ? 48 89 35")), 0x4, 0x8));
 	sdk::InputSystem = iless::Capture<sdk::cinput_system>(pInputSystemRegisterList, INPUT_SYSTEM_VERSION);
 	sdk::MemAlloc = *reinterpret_cast<sdk::cmem_alloc**>(MEM::GetExportAddress(pTier0Handle, CS_XOR("g_pMemAlloc")));
-
-	/* // old interface
-	ui_engine = encrypted_pptr<sdk::cui_engine>(client.at(sdk::offsets::globals::panorama_ui));
-	game_ui_funcs = encrypted_ptr<sdk::cgame_ui_funcs>(engine2.at(sdk::offsets::interfaces::engine2::vengine_gameuifuncs_version005));
-	loc = encrypted_ptr<sdk::clocalize>(localize.at(sdk::offsets::interfaces::localize::localize_001));
-	prediction = encrypted_ptr<sdk::cprediction>(client.at(sdk::offsets::interfaces::client::source2_client_prediction001));
-
-	fn.get_weapon_data = reinterpret_cast<get_weapon_data_t>(client.at(sdk::offsets::functions::client::get_weapon_data));
-	fn.sdl_set_relative_mouse_mode = reinterpret_cast<sdl_set_relative_mouse_mode_t>(sdl3.at(sdk::offsets::functions::sdl3::set_relative_mouse_mode));
-	fn.sdl_set_window_grab = reinterpret_cast<sdl_set_window_grab_t>(sdl3.at(sdk::offsets::functions::sdl3::set_window_grab));
-	fn.set_channel_verbosity = reinterpret_cast<set_channel_verbosity_t>(tier0.at(sdk::offsets::functions::logging_system::set_channel_verbosity));
-	fn.register_logging_channel = reinterpret_cast<register_logging_channel_t>(tier0.at(sdk::offsets::functions::logging_system::register_logging_channel));
-	fn.log_direct = reinterpret_cast<log_direct_t>(tier0.at(sdk::offsets::functions::logging_system::log_direct));
-	fn.find_channel = reinterpret_cast<find_channel_t>(tier0.at(sdk::offsets::functions::logging_system::find_channel));
-	fn.set_channel_verbosity(fn.find_channel("Shooting"), sdk::logging_severity_t::LS_HIGHEST_SEVERITY);*/
 
 	while (sdk::hWindow == nullptr)
 	{
@@ -147,9 +127,7 @@ void game_t::init()
 	// load other
 	cfg.init();
 
-//#ifdef _DEBUG
 	sdk::Cvar->unlock();
-//#endif
 
 	hook_manager.init();
 	//hook_manager.attach();

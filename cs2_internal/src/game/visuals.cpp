@@ -30,64 +30,65 @@ void visuals_t::run()
 
 	const auto last_ent = sdk::GameEntitySystem->get_last_entity_index();
 
-	/*if (cfg.visuals.esp.world.enabled.get())
+	if (cfg.visuals.esp.world.enabled.get())
 		for (auto i =  (sdk::max_players + 1); i <= last_ent; i++)
 		{
-			const auto entity = sdk::GameEntitySystem ->get_entity_by_index(i);
-			if (!entity || !entity->get_game_scene_node_ptr() || entity->get_h_owner_entity().get())
-				continue;
+			//const auto entity = sdk::GameEntitySystem ->get_entity_by_index(i);
+			//if (!entity || !entity->get_game_scene_node_ptr() || entity->get_h_owner_entity().get())
+				//continue;
 
-			if (!entity->get_entity_ptr()->get_designer_name() || *entity->get_entity_ptr()->get_designer_name() == '0')
-				continue;
+			//if (!entity->get_entity_ptr()->get_designer_name() || *entity->get_entity_ptr()->get_designer_name() == '0')
+				//continue;
 
-			const auto hashed_name = utils::fnv1a(entity->get_entity_ptr()->get_designer_name());
-			if (!sdk::name_to_id.contains(hashed_name))
-				continue;
+			//const auto hashed_name = utils::fnv1a(entity->get_entity_ptr()->get_designer_name());
+			//if (!sdk::name_to_id.contains(hashed_name))
+				//continue;
 
-			auto origin = *entity->get_computed_abs_origin();
+			//auto origin = *entity->get_computed_abs_origin();
 
-			const auto dist = view_setup->origin.dist(origin);
-			const auto cl_dist = clamp(dist - 500.f, 0.f, 500.f);
-			draw_mgr.buf->g.alpha = (255.f - cl_dist / 2) / 255.f;
-			if (draw_mgr.buf->g.alpha == 0.f)
-				continue;
+			//const auto dist = view_setup->origin.dist(origin);
+			//const auto cl_dist = clamp(dist - 500.f, 0.f, 500.f);
+			//draw_mgr.buf->g.alpha = (255.f - cl_dist / 2) / 255.f;
+			//if (draw_mgr.buf->g.alpha == 0.f)
+				//continue;
 
-			const auto weapon_id = sdk::name_to_id[hashed_name];
-			const auto name = std::string(entity->get_entity_ptr()->get_designer_name());
+			//const auto weapon_id = sdk::name_to_id[hashed_name];
+			//const auto name = std::string(entity->get_entity_ptr()->get_designer_name());
 
-			const auto weapon = entity->as<sdk::schema::base_player_weapon>();
-			const auto wpn_item = weapon ? &weapon->get_attribute_manager().get_item() : nullptr;
+			//const auto weapon = entity->as<sdk::schema::base_player_weapon>();
+			//const auto wpn_item = weapon ? &weapon->get_attribute_manager().get_item() : nullptr;
 
-			vec2 pos{};
-			if (!math::world_to_screen(origin, pos))
-				continue;
+			//vec2 pos{};
+			//if (!math::world_to_screen(origin, pos))
+				//continue;
 
-			if (wpn_item && wpn_item->as<sdk::cs2_econ_item_view>()->get_item_definition())
-			{
-				auto offset = vec2{0, 7};
-				if (cfg.visuals.esp.world.weapon_icons.get())
-				{
-					draw_mgr.add_icon(
-						pos - offset, cfg.visuals.esp.world.color.get(), draw_mgr.get_panorama_texture(XOR("icons/equipment/") + name.substr(7), 12),
-						text_params::with_vh(align_center, align_center));
-				}
-				else
-				{
-					draw_mgr.buf->font = draw.fonts[FNV1A("esp")];
-					draw_mgr.buf->add_text(
-						pos + offset, game->loc->find_safe(wpn_item->as<sdk::cs2_econ_item_view>()->get_item_definition()->item_type_name),
-						cfg.visuals.esp.world.color.get(), text_params::with_vh(align_center, align_center));
-				}
+			//if (wpn_item && wpn_item->as<sdk::cs2_econ_item_view>()->get_item_definition())
+			//{
+				//auto offset = vec2{0, 7};
+				//if (cfg.visuals.esp.world.weapon_icons.get())
+				//{
+					//draw_mgr.add_icon(
+						//pos - offset, cfg.visuals.esp.world.color.get(), draw_mgr.get_panorama_texture(XOR("icons/equipment/") + name.substr(7), 12),
+						//text_params::with_vh(align_center, align_center));
+				//}
+				//else
+				//{
+					//draw_mgr.buf->font = draw.fonts[FNV1A("esp")];
+					//draw_mgr.buf->add_text(
+						//pos + offset, game->loc->find_safe(wpn_item->as<sdk::cs2_econ_item_view>()->get_item_definition()->item_type_name),
+						//cfg.visuals.esp.world.color.get(), text_params::with_vh(align_center, align_center));
+				//}
 
-				const auto clip = clamp(weapon->get_clip1(), 0, 1000);
-				const auto maxclip = clamp(game->fn.get_weapon_data(&weapon->get_attribute_manager().get_item())->get_max_clip1(), 0, 1000);
+				//const auto clip = clamp(weapon->get_clip1(), 0, 1000);
+				//const auto maxclip = clamp(game->fn.get_weapon_data(&weapon->get_attribute_manager().get_item())->get_max_clip1(), 0, 1000);
 
-				if (clip > 0 && maxclip > 0)
-					draw_bar(
-						vec2{pos.x - 28, pos.y + 3} + offset, 52, true, {cfg.visuals.esp.world.color.get()}, static_cast<float>(clip) / maxclip,
-						static_cast<float>(clip) / maxclip <= 0.93f ? std::optional(clip) : std::nullopt);
-			}
-		}*/
+				//if (clip > 0 && maxclip > 0)
+					//draw_bar(
+						//vec2{pos.x - 28, pos.y + 3} + offset, 52, true, {cfg.visuals.esp.world.color.get()}, static_cast<float>(clip) / maxclip,
+						//static_cast<float>(clip) / maxclip <= 0.93f ? std::optional(clip) : std::nullopt);
+			//}
+		//}
+
 
 	for (auto i = 1; i <= sdk::max_players; i++)
 	{
@@ -204,14 +205,14 @@ void visuals_t::run()
 					rect(vec2{ player.top.x - player.width + 2, player.top.y + 2 }).size(vec2{ player.width * 2 - 4, player.height - 4 }), ::color(color::black(), 0.4f));
 			};
 
-		auto player_info = [&]()
-			{
-				if (cfg.visuals.esp.armor.get())
-				{
-					const auto armor = player_pawn->get_m_ArmorValue();
-					if (armor > 0)
-						add_bar(player, esp_item_pos::bottom, { cfg.visuals.esp.armor_color.get() }, armor / 100.f, armor <= 93 ? std::optional(armor) : std::nullopt);
-				}
+		//auto player_info = [&]()
+			//{
+				//if (cfg.visuals.esp.armor.get())
+				//{
+					//const auto armor = player_pawn->get_m_ArmorValue();
+					//if (armor > 0)
+						//add_bar(player, esp_item_pos::bottom, { cfg.visuals.esp.armor_color.get() }, armor / 100.f, armor <= 93 ? std::optional(armor) : std::nullopt);
+				//}
 
 			/*	if (cfg.visuals.esp.ammo.get() && player_pawn->get_weapon_services_ptr() && player_pawn->get_weapon_services_ptr()->get_h_active_weapon().get())
 				{
@@ -226,7 +227,7 @@ void visuals_t::run()
 							static_cast<float>(clip) / maxclip <= 0.93f ? std::optional(clip) : std::nullopt);
 				}*/
 
-				if (cfg.visuals.esp.health.get())
+				/*if (cfg.visuals.esp.health.get())
 				{
 					const auto health = player_pawn->get_m_iHealth();
 					const auto max_health = std::max(health, player_pawn->get_m_iMaxHealth());
@@ -241,14 +242,14 @@ void visuals_t::run()
 						add_bar(
 							player, esp_item_pos::left, colors, player.health_interpolated / max_health,
 							static_cast<float>(health) / max_health <= 0.93 ? std::optional(health) : std::nullopt);
-				}
+				}*/
 
-				if (cfg.visuals.esp.ping.get())
+				/*if (cfg.visuals.esp.ping.get())
 				{
 					const auto ping = player_controller->get_ping();
 					if (ping >= 100)
 						add_bar(player, esp_item_pos::top, { cfg.visuals.esp.ping_color.get() }, static_cast<float>(ping) / 200, ping);
-				}
+				}*/
 
 				layer->font = draw.fonts[FNV1A("esp_name")];
 				if (cfg.visuals.esp.name.get())
@@ -349,26 +350,26 @@ void visuals_t::run()
 
 			};
 
-		if (player.alpha > 0.f)
-		{
+		//if (player.alpha > 0.f)
+		//{
 
-			/*if (player.oof)
-			{
-				player_out_of_fov();
-				continue;
-			}*/
+		//	/*if (player.oof)
+		//	{
+		//		player_out_of_fov();
+		//		continue;
+		//	}*/
 
-			if (!cfg.visuals.esp.enabled.get())
-				continue;
+		//	if (!cfg.visuals.esp.enabled.get())
+		//		continue;
 
-			draw_mgr.buf->g.alpha = player.alpha / 255.f;
+		//	draw_mgr.buf->g.alpha = player.alpha / 255.f;
 
-			//player_skeleton(player, layer);
-			player_box();
-			player_info();
+		//	//player_skeleton(player, layer);
+		//	player_box();
+		//	player_info();
 
-			draw_mgr.buf->add_rect({ {80,80},{200,200} }, { 0,255,0, 255 });
-		}
+		//	draw_mgr.buf->add_rect({ {80,80},{200,200} }, { 0,255,0, 255 });
+		//}
 	}
 
 	draw_mgr.buf->g.alpha = 1.f;
